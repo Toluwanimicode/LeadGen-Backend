@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const routes = require('./routes');
 const dotenv = require('dotenv');
+const routes = require('./routes');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -29,5 +29,7 @@ mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTop
   .catch((error) => {
     console.error("Error connecting to the database:", error);
   });
+
+
 
 
